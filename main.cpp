@@ -1,17 +1,12 @@
 #include <iostream>
 
 int main() {
-    int num1, num2, sum;
+    int a = 5, b = 7;
 
-    std::cout << "请输入第一个整数：";
-    std::cin >> num1;
-
-    std::cout << "请输入第二个整数：";
-    std::cin >> num2;
-
-    sum = num1 + num2;
-
-    std::cout << "两个数的和为：" << sum << std::endl;
-
+    // Lambda 表达式求和
+    auto sum = [](int x, int y) -> int {
+        return x + y;
+    };
+    std::cout << "Sum: " << sum(a, b) << std::endl;    
     return 0;
 }
